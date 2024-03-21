@@ -10,6 +10,7 @@ module.exports = {
         sans: ["var(--font-inter)"],
         mono: ["var(--font-roboto-mono)"],
         mont: ["var(--font-mont)"],
+        akaya: ["Akaya Kanadaka"],
       },
       colors: {
         dark: "#1b1b1b",
