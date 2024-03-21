@@ -49,24 +49,53 @@ const NavBar = () => {
 
       <nav className="flex  items-center justify-between flex-wrap">
         <motion.a
-          whileHover={{ scale: 1.2 }}
-          onHoverStart={(e) => {}}
-          onHoverEnd={(e) => {}}
-        />
-        <motion.a href="#" target="_blank">
-          <Image src={linkdein} alt="telegram" className="h-10 w-10" />
+          href="https://www.linkedin.com/in/amir-fattahi77/"
+          target="_blank"
+          whileHover={{ y: -5, scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
+          className="mx-3"
+        >
+          <Image
+            src={linkdein}
+            alt="linkdein"
+            className="h-10 w-10 rounded-lg"
+          />
         </motion.a>
-        <motion.a href="#" target="_blank">
+        <motion.a
+          href="https://t.me/Amirfattahi77"
+          target="_blank"
+          whileHover={{ y: -5, scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
+          className="mx-3"
+        >
           <Image src={telegram} alt="telegram" className="h-10 w-10" />
         </motion.a>
-        <motion.a href="#" target="_blank">
-          <Image src={gmail} alt="telegram" className="h-10 w-10" />
+        <motion.a
+          href="mailto:amirfattahi22@gmail.com?subject=Your%20Subject&body=Your%20Message"
+          target="_blank"
+          whileHover={{ y: -5, scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
+          className="mx-3"
+        >
+          <Image src={gmail} alt="gmail" className="h-10 w-10" />
         </motion.a>
-        <motion.a href="#" target="_blank">
-          <Image src={instagram} alt="telegram" className="h-10 w-10" />
+        <motion.a
+          href="https://www.instagram.com/amirfattahi77?igsh=MzNlNGNkZWQ4Mg=="
+          target="_blank"
+          whileHover={{ y: -5, scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
+          className="mx-3"
+        >
+          <Image src={instagram} alt="instagram" className="h-10 w-10" />
         </motion.a>
-        <motion.a href="#" target="_blank">
-          <Image src={github} alt="telegram" className="h-10 w-10" />
+        <motion.a
+          href="https://github.com/amirdity"
+          target="_blank"
+          whileHover={{ y: -5, scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
+          className="mx-3"
+        >
+          <Image src={github} alt="github" className="h-10 w-10" />
         </motion.a>
       </nav>
       <div className="absolute top-3 left-[50%] translate-x-[-50%]">
