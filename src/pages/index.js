@@ -6,11 +6,16 @@ import Layout from "@/components/Layout";
 import portfolio from "../../public/images/profile/portfolio.png";
 import AnimatedText from "@/components/AnimatedText";
 import { motion } from "framer-motion";
+import { LinkArrow } from "@/components/Icons";
+import Link from "next/link";
+
+import Particle from "@/components/Particle";
 export default function Home() {
   return (
     <>
-      <main className="flex items-center text-dark w-full font-sans">
+      <main className="flex items-center text-dark w-full ">
         <Layout>
+          <Particle />
           <div className="flex items-center justify-between w-full">
             <div className="w-1/2">
               <Image src={portfolio} alt="portfolio" className="" />
@@ -25,7 +30,21 @@ export default function Home() {
               >
                 as a front-end developer i climb the projects
               </motion.h1>
-              <div></div>
+              <motion.div
+                className="text-left flex items-center bg-dark text-light p-2 px-6 rounded-lg text-lg hover:bg-white hover:text-dark border-2 border-solid border-transparent hover:border-dark left-0 mt-3 "
+                animate={{ x: -150, y: 0 }}
+                initial={{ y: 500, x: -150 }}
+                transition={{ delay: 3, duration: 2 }}
+              >
+                <Link
+                  className="inline-block"
+                  href={"https://portfolio-nextjs-tailwind-gamma.vercel.app/"}
+                >
+                  next.js version{" "}
+                  <LinkArrow className={"w-4 ml-1 inline-block "} />
+                </Link>
+                <p className="ml-3"> Turn your VPN On</p>
+              </motion.div>
             </div>
           </div>
         </Layout>

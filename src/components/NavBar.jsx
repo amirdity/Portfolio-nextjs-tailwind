@@ -44,7 +44,7 @@ const NavBar = () => {
           className="mr-4 "
         />
         <CustomLink href="/Courses" title="Courses" className="mr-4 " />
-        <CustomLink href="/About Me" title="About Me" className="mr-4 " />
+        <CustomLink href="/About Me" title="About Me" className="mr-5 " />
       </nav>
 
       <nav className="flex  items-center justify-between flex-wrap">
