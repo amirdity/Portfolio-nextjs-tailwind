@@ -10,6 +10,7 @@ import { LinkArrow } from "@/components/Icons";
 import Link from "next/link";
 
 import Particle from "@/components/Particle";
+import ReactCircle from "@/components/ReactCircle";
 export default function Home() {
   return (
     <>
@@ -21,6 +22,7 @@ export default function Home() {
               <Image src={portfolio} alt="portfolio" className="" />
             </div>
             <div className="flex flex-col items-center self-center w-1/2 ">
+              <ReactCircle />
               <AnimatedText text={"I conquer the projects like mountains"} />
               <motion.h1
                 animate={{ x: 0 }}
