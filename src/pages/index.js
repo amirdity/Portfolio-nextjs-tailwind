@@ -33,19 +33,21 @@ export default function Home() {
                 as a front-end developer i climb the projects
               </motion.h1>
               <motion.div
-                className="text-left flex items-center bg-dark text-light p-2 px-6 rounded-lg text-lg hover:bg-white hover:text-dark border-2 border-solid border-transparent hover:border-dark left-0 mt-3 "
+                className="text-left flex items-center bg-dark text-light p-2 px-6 rounded-lg text-lg hover:bg-white hover:text-dark border-2 border-solid border-transparent hover:border-dark left-0 mt-3 h-10 w-[350px] "
                 animate={{ x: -150, y: 0 }}
                 initial={{ y: 500, x: -150 }}
                 transition={{ delay: 3, duration: 2 }}
               >
                 <Link
-                  className="inline-block"
+                  className=" "
                   href={"https://portfolio-nextjs-tailwind-gamma.vercel.app/"}
                 >
-                  next.js version{" "}
-                  <LinkArrow className={"w-4 ml-1 inline-block "} />
+                  <LinkArrow className={"inline-block w-5"} />{" "}
+                  <p className="ml-3 inline-block">
+                    {" "}
+                    next.js version( Turn your VPN On )
+                  </p>
                 </Link>
-                <p className="ml-3"> Turn your VPN On</p>
               </motion.div>
             </div>
           </div>
