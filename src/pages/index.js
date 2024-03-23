@@ -42,10 +42,10 @@ export default function Home() {
                   className=" "
                   href={"https://portfolio-nextjs-tailwind-gamma.vercel.app/"}
                 >
-                  <LinkArrow className={"inline-block w-5"} />{" "}
+                  {" "}
                   <p className="ml-3 inline-block">
                     {" "}
-                    next.js version( Turn your VPN On )
+                    next.js version ( Turn your VPN On )
                   </p>
                 </Link>
               </motion.div>
