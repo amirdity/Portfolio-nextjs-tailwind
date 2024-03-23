@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import React from "react";
 import { motion } from "framer-motion";
+import AnimatedText from "@/components/AnimatedText";
 const Skill = ({ name, x, y }) => {
   return (
     <motion.div
@@ -18,7 +19,8 @@ const Skill = ({ name, x, y }) => {
 function Skills() {
   return (
     <Layout>
-      <h1 className="font-bold text-4xl mt-64 text-center w-full">Skills </h1>{" "}
+      <AnimatedText text={"Skills"} classname="text-center" />
+      <h1 className="font-bold text-4xl mt-5 text-center w-full"> </h1>{" "}
       <div className="relativew-full h-screen flex items-center justify-center rounded-full bg-circularLight">
         <Skill name={"WEB"} x={""} y={""} />
         <Skill name={"CSS"} x={"-6VW"} y={"-11VW"} />
@@ -33,6 +35,7 @@ function Skills() {
         <Skill name={"Solidity"} x={"-35VW"} y={"0"} />
         <Skill name={"jQuery"} x={"28VW"} y={"3VW"} />
         <Skill name={"framer-motion"} x={"28VW"} y={"-16vw"} />
+        <Skill name={"next.js"} x={"-32VW"} y={"-9vw"} />
       </div>
     </Layout>
   );
