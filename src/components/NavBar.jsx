@@ -1,4 +1,4 @@
-import React from "react";
+import React, { use } from "react";
 import Link from "next/link";
 import Logo from "./Logo";
 import { useRouter } from "next/router";
@@ -11,6 +11,8 @@ import instagram from "../../public/images/svgs/instagram.png";
 import github from "../../public/images/svgs/github.png";
 
 import { frame } from "framer-motion";
+import useThemeSwitcher from "./hooks/useThemeSwitcher";
+import { MoonIcon, SunIcon } from "./Icons";
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
 
@@ -28,6 +30,7 @@ const CustomLink = ({ href, title, className = "" }) => {
   );
 };
 const NavBar = () => {
+  const [mode, setMode] = useThemeSwitcher();
   return (
     <header className="w-full px-32 py-7 font-medium flex items-center justify-between ">
       <nav>
@@ -97,6 +100,13 @@ const NavBar = () => {
         >
           <Image src={github} alt="github" className="h-10 w-10" />
         </motion.a>
+        <button onClick={() => setMode(mode === "light" ? "dark" : "light")}>
+          {mode === "dark" ? (
+            <SunIcon className={"fill-dark"} />
+          ) : (
+            <MoonIcon className={"fill-dark"} />
+          )}
+        </button>
       </nav>
       <div className="absolute top-3 left-[50%] translate-x-[-50%]">
         <Logo />
