@@ -20,7 +20,7 @@ const CustomLink = ({ href, title, className = "" }) => {
     <Link href={href} className={`${className} relative group`}>
       {title}{" "}
       <span
-        className={`h-[2px] inline-block bg-dark absolute left-0 -bottom-[2px] group-hover:w-full transition-[width] ease duration-500 ${
+        className={`h-[2px] inline-block bg-dark absolute left-0 -bottom-[2px] group-hover:w-full transition-[width] ease duration-500 dark:text-light dark:bg-light ${
           router.asPath === href ? "w-full" : "w-0"
         }`}
       >
@@ -32,7 +32,7 @@ const CustomLink = ({ href, title, className = "" }) => {
 const NavBar = () => {
   const [mode, setMode] = useThemeSwitcher();
   return (
-    <header className="w-full px-32 py-7 font-medium flex items-center justify-between ">
+    <header className="w-full px-32 py-7 font-medium flex items-center justify-between dark:text-light ">
       <nav>
         <CustomLink href="/Home" title="Home" className="mr-4 " />
         <CustomLink href="/Skills" title="Skills" className="mr-4 " />
@@ -100,7 +100,12 @@ const NavBar = () => {
         >
           <Image src={github} alt="github" className="h-10 w-10" />
         </motion.a>
-        <button onClick={() => setMode(mode === "light" ? "dark" : "light")}>
+        <button
+          onClick={() => setMode(mode === "light" ? "dark" : "light")}
+          className={`ml-3 flex items-center justify-center rounded-full p-1 ${
+            mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
+          }`}
+        >
           {mode === "dark" ? (
             <SunIcon className={"fill-dark"} />
           ) : (

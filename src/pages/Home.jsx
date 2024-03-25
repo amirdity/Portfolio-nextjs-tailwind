@@ -15,21 +15,24 @@ import ReactCircle from "@/components/ReactCircle";
 function Home() {
   return (
     <>
-      <main className="flex items-center text-dark w-full ">
+      <main className="flex items-center text-dark w-full dark:text-light">
         <Layout>
           <Particle />
           <div className="flex items-center justify-between w-full">
             <div className="w-1/2">
               <Image src={portfolio} alt="portfolio" className="" />
             </div>
-            <div className="flex flex-col items-center self-center w-1/2 ">
+            <div className="flex flex-col items-center self-center w-1/2 dark:text-light">
               <ReactCircle />
-              <AnimatedText text={"I conquer the projects like mountains"} />
+              <AnimatedText
+                text={"I conquer the projects like mountains"}
+                classname="dark:text-light"
+              />
               <motion.h1
                 animate={{ x: 0 }}
                 initial={{ x: 1000 }}
                 transition={{ delay: 3 }}
-                className="text-lg inline-block text-dark w-full capitalize text-left"
+                className="text-lg inline-block text-dark w-full capitalize text-left dark:text-light"
               >
                 as a front-end developer i climb the projects
               </motion.h1>

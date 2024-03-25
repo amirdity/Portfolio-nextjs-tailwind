@@ -4,8 +4,11 @@ import React from "react";
 
 function about() {
   return (
-    <Layout>
-      <AnimatedText text={"this page is about me"} classname="text-center" />
+    <Layout classname=" dark:text-light">
+      <AnimatedText
+        text={"this page is about me"}
+        classname="text-center  dark:text-light"
+      />
       <h1>
         In 2018, I attended the University of Tehran to pursue a Bachelor's
         degree. After a year, I made the decision to learn new skills and

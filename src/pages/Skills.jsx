@@ -5,7 +5,7 @@ import AnimatedText from "@/components/AnimatedText";
 const Skill = ({ name, x, y }) => {
   return (
     <motion.div
-      className="flex items-center justify-center rounded-full bg-dark text-light py-3 px-6 shadow-black cursor-pointer absolute "
+      className="flex items-center justify-center rounded-full bg-dark text-light py-3 px-6 shadow-black cursor-pointer absolute  dark:bg-light dark:text-dark"
       whileHover={{ scale: 1.2 }}
       initial={{ x: 0, y: 0 }}
       animate={{ x: x, y: y }}
@@ -21,7 +21,7 @@ function Skills() {
     <Layout>
       <AnimatedText text={"Skills"} classname="text-center" />
       <h1 className="font-bold text-4xl mt-5 text-center w-full"> </h1>{" "}
-      <div className="relativew-full h-screen flex items-center justify-center rounded-full bg-circularLight">
+      <div className="relativew-full h-screen flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark ">
         <Skill name={"WEB"} x={""} y={""} />
         <Skill name={"CSS"} x={"-6VW"} y={"-11VW"} />
         <Skill name={"HTML"} x={"-21VW"} y={"-2VW"} />

@@ -14,26 +14,36 @@ import ReactCircle from "@/components/ReactCircle";
 export default function Home() {
   return (
     <>
-      <main className="flex items-center text-dark w-full ">
+      <main className="flex items-center text-dark w-full dark:text-light ">
         <Layout>
           <Particle />
           <div className="flex items-center justify-between w-full">
             <div className="w-1/2">
-              <Image src={portfolio} alt="portfolio" className="" />
+              <Image
+                src={portfolio}
+                alt="portfolio"
+                className=""
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw,33vw"
+              />
             </div>
             <div className="flex flex-col items-center self-center w-1/2 ">
               <ReactCircle />
-              <AnimatedText text={"I conquer the projects like mountains"} />
+              <AnimatedText
+                text={"I conquer the projects like mountains"}
+                classname="dark:text-light"
+              />
               <motion.h1
                 animate={{ x: 0 }}
                 initial={{ x: 1000 }}
                 transition={{ delay: 3 }}
-                className="text-lg inline-block text-dark w-full capitalize text-left"
+                className="text-lg inline-block text-dark w-full capitalize text-left dark:text-light"
               >
                 as a front-end developer i climb the projects
               </motion.h1>
               <motion.div
-                className="text-left flex items-center bg-dark text-light p-2 px-6 rounded-lg text-lg hover:bg-white hover:text-dark border-2 border-solid border-transparent hover:border-dark left-0 mt-3 h-10 w-[350px] "
+                className="text-left flex items-center bg-dark text-light p-2 px-6 rounded-lg text-lg hover:bg-white hover:text-dark border-2 border-solid border-transparent hover:border-dark left-0 mt-3 h-10 w-[350px] 
+                dark:text-dark dark:bg-light hover:dark:bg-dark hover:dark:text-light hover:dark:border-light"
                 animate={{ x: -150, y: 0 }}
                 initial={{ y: 500, x: -150 }}
                 transition={{ delay: 3, duration: 2 }}
