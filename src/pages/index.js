@@ -51,6 +51,7 @@ export default function Home() {
                 <Link
                   className=" "
                   href={"https://portfolio-nextjs-tailwind-gamma.vercel.app/"}
+                  target={"_blank"}
                 >
                   {" "}
                   <p className="ml-3 inline-block">
